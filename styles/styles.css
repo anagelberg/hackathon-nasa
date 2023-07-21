@@ -32,8 +32,8 @@ body {
   gap: 1rem;
 }
 .hero .hero__images {
-  width: 30vw;
-  height: 30vw;
+  width: 20vw;
+  height: 20vw;
   border: 1px solid black;
   background-position: center;
   background-size: cover;
@@ -42,4 +42,25 @@ body {
 
 .planet-form {
   margin-bottom: 1rem;
+}
+
+.scroll-back,
+.scroll-forward {
+  height: 30rem;
+  background-color: black;
+  color: white;
+  width: 2rem;
+  transition: 0.3s;
+}
+.scroll-back:hover,
+.scroll-forward:hover {
+  background-color: grey;
+}
+
+.image-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 80%;
+  margin: auto;
 }/*# sourceMappingURL=styles.css.map */
