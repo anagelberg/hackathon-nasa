@@ -50,6 +50,10 @@ form.addEventListener('submit', (event) => {
         .then((response) => {
             imgArr = formatArray(response);
             arrSize = imgArr.length;
+
+            if (arrSize === 0) {
+                alert('Could not find any photos')
+            }
             display(imgArr.slice(currentPos, 9), heroEl);
             event.target.reset();
         }).catch(err => {
