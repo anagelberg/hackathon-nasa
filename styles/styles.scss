@@ -72,6 +72,7 @@ body {
 }
 
 .solarsystem {
+    margin: 2rem 0;
     display: flex;
     justify-content: center;
     position: relative;
@@ -82,19 +83,16 @@ body {
     background-size: cover;
 
     &__planet {
-        background-color: red;
         width: 25px;
         height: 25px;
         position: absolute;
-
-
     }
 }
 
 #sun {
-    top: 45%;
-    width: 50px;
-    height: 50px;
+    top: 40%;
+    width: 70px;
+    height: 70px;
 }
 
 #mercury {
@@ -118,21 +116,27 @@ body {
 }
 
 #jupiter {
-    top: 27%;
-    right: 18%;
+    height: 35px;
+    width: 35px;
+    top: 26%;
+    right: 17%;
 }
 
 #saturn {
-    top: 60%;
-    left: 12%;
+    height: 40px;
+    width: 40px;
+    top: 55%;
+    left: 10%;
 }
 
 #uranus {
-    top: 45%;
+    top: 43%;
     right: 9%;
 }
 
 #neptune {
+    height: 40px;
+    width: 40px;
     bottom: 10%;
-    left: 7%;
+    left: 6%;
 }
