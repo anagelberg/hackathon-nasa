@@ -13,6 +13,14 @@ body {
 
 }
 
+h1 {
+    margin: 5rem auto 1rem;
+    font-size: 70px;
+    font-weight: 600;
+    color: #FDFDFE;
+    text-shadow: 10px 10px 5px #AEBFDD;
+}
+
 .text-container {
     display: flex;
     flex-direction: column;
@@ -35,7 +43,7 @@ body {
     justify-content: center;
     gap: 1rem;
 
-    .hero__images {
+    &__images {
         width: 20vw;
         height: 20vw;
         border: 1px solid black;
@@ -43,11 +51,48 @@ body {
         background-size: cover;
         background-repeat: no-repeat;
         box-shadow: $box-shadow-value;
+        transition: 0.7s;
+
+        &:hover {
+            // visibility: hidden;
+            width: 25vw;
+            height: 25vw;
+        }
+
+        &--hidden {
+            // display: none;
+            visibility: hidden;
+        }
+
+        &--big {
+            width: 100%;
+            height: 100%;
+        }
     }
 }
 
+
 .planet-form {
     margin-bottom: 2rem;
+
+    &__input {
+        padding: .25rem .75rem;
+        border-radius: 3px;
+        margin-right: 1rem;
+        margin-left: 1rem;
+    }
+
+    &__btn {
+        border-radius: 3px;
+        padding: .25rem .75rem;
+        background-color: black;
+        color: white;
+        transition: 0.4s;
+
+        &:hover {
+            background-color: navy;
+        }
+    }
 }
 
 .scroll-back,
@@ -86,57 +131,65 @@ body {
         width: 25px;
         height: 25px;
         position: absolute;
+
+
+        &:hover {
+            cursor: pointer;
+            background-color: rgba(0, 0, 0, .1);
+
+        }
     }
-}
 
-#sun {
-    top: 40%;
-    width: 70px;
-    height: 70px;
-}
+    #sun {
+        top: 40%;
+        width: 70px;
+        height: 70px;
+    }
 
-#mercury {
-    top: 40%;
-    right: 39%;
-}
+    #mercury {
+        top: 40%;
+        right: 39%;
+    }
 
-#earth {
-    top: 49%;
-    right: 30%;
-}
+    #earth {
+        top: 49%;
+        right: 30%;
+    }
 
-#venus {
-    top: 49%;
-    left: 34%;
-}
+    #venus {
+        top: 49%;
+        left: 34%;
+    }
 
-#mars {
-    top: 67%;
-    left: 28%;
-}
+    #mars {
+        top: 67%;
+        left: 28%;
+    }
 
-#jupiter {
-    height: 35px;
-    width: 35px;
-    top: 26%;
-    right: 17%;
-}
+    #jupiter {
+        height: 35px;
+        width: 35px;
+        top: 26%;
+        right: 17%;
+    }
 
-#saturn {
-    height: 40px;
-    width: 40px;
-    top: 55%;
-    left: 10%;
-}
+    #saturn {
+        height: 40px;
+        width: 40px;
+        top: 55%;
+        left: 10%;
+    }
 
-#uranus {
-    top: 43%;
-    right: 9%;
-}
+    #uranus {
+        top: 43%;
+        right: 9%;
+    }
 
-#neptune {
-    height: 40px;
-    width: 40px;
-    bottom: 10%;
-    left: 6%;
+    #neptune {
+        height: 40px;
+        width: 40px;
+        bottom: 10%;
+        left: 6%;
+    }
+
 }

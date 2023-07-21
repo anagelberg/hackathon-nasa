@@ -12,7 +12,16 @@ const display = (urlArray, parentContainer) => {
         const imageContainer = document.createElement('div');
         imageContainer.classList.add('hero__images');
         imageContainer.style.backgroundImage = `url('${url}')`;
+
+        imageContainer.addEventListener('click', (event) => {
+            event.preventDefault();
+            console.log('clicked');
+            event.target.classList.add('.hero__images--hidden');
+        })
+
         parentContainer.appendChild(imageContainer);
+
+
     })
 }
 
