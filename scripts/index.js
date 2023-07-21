@@ -51,8 +51,9 @@ form.addEventListener('submit', (event) => {
             imgArr = formatArray(response);
             arrSize = imgArr.length;
             display(imgArr.slice(currentPos, 9), heroEl);
+            event.target.reset();
         }).catch(err => {
-            console.log('invalid search', err);
+            alert('api error:', err);
         })
 
 })
@@ -79,7 +80,7 @@ planets.forEach((planet) => {
                 arrSize = imgArr.length;
                 display(imgArr.slice(currentPos, 9), heroEl);
             }).catch(err => {
-                console.log('invalid search', err);
+                alert('invalid search or api error', err);
             })
 
     })
