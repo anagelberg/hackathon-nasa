@@ -18,7 +18,11 @@ const display = (urlArray, parentContainer) => {
 
 const formatArray = (apiRes) => {
     let images_array = [];
-    const resArr = apiRes.data.collection.items;
+    let resArr = apiRes.data.collection.items;
+    resArr = resArr.filter(res => {
+        return res.data[0].center === 'JPL' || res.data[0].center === 'JSC';
+    })
+
     console.log("result Array", resArr);
     for (imageIndex = 0; imageIndex < resArr.length; imageIndex++) {
         let image = resArr[imageIndex].links[0].href;
@@ -39,10 +43,42 @@ form.addEventListener('submit', (event) => {
             arrSize = imgArr.length;
             display(imgArr.slice(currentPos, 9), heroEl);
         }).catch(err => {
-            console.log('invalid search')
+            console.log('invalid search', err);
         })
 
 })
+
+
+
+
+let planets = document.querySelectorAll('.solarsystem__planet');
+
+planets.forEach((planet) => {
+    planet.addEventListener("click", () => {
+        console.log(planet.id);
+        let search;
+        if (planet.id !== "sun") {
+            search = "planet " + planet.id;
+        } else {
+            search = planet.id;
+        }
+
+
+        axios.get(`https://images-api.nasa.gov/search?q=${search}&media_type=image`)
+            .then((response) => {
+                imgArr = formatArray(response);
+                arrSize = imgArr.length;
+                display(imgArr.slice(currentPos, 9), heroEl);
+            }).catch(err => {
+                console.log('invalid search', err);
+            })
+
+    })
+})
+
+
+
+
 
 const scrollForEl = document.querySelector('.scroll-forward');
 scrollForEl.addEventListener('click', event => {
