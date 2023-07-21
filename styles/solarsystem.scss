@@ -1,0 +1,70 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.solarsystem {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 600px;
+    height: 300px;
+    background-image: url(../assets/solarsystem.jpg);
+    background-position: center;
+    background-size: cover;
+
+    &__planet {
+        background-color: red;
+        width: 25px;
+        height: 25px;
+        position: absolute;
+
+        
+    }
+}
+
+#sun {
+    top: 45%;
+    width: 50px;
+    height: 50px;
+}
+
+#mercury {
+    top: 40%;
+    right: 39%;
+}
+
+#earth {
+    top: 49%;
+    right: 30%;
+}
+
+#venus {
+    top: 49%;
+    left: 34%;
+}
+
+#mars {
+    top: 67%;
+    left: 28%;
+}
+
+#jupiter {
+    top: 27%;
+    right: 18%;
+}
+
+#saturn {
+    top: 60%;
+    left: 12%;
+}
+
+#uranus {
+    top: 45%;
+    right: 9%;
+}
+
+#neptune {
+    bottom: 10%;
+    left: 7%;
+}
