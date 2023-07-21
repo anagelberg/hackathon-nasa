@@ -19,7 +19,7 @@ const display = (urlArray, parentContainer) => {
 const formatArray = (apiRes) => {
     let images_array = [];
     const resArr = apiRes.data.collection.items;
-    console.log(resArr);
+    console.log("result Array", resArr);
     for (imageIndex = 0; imageIndex < resArr.length; imageIndex++) {
         let image = resArr[imageIndex].links[0].href;
         images_array.push(image);
@@ -32,14 +32,11 @@ const formatArray = (apiRes) => {
 form.addEventListener('submit', (event) => {
     event.preventDefault();
     const search = 'planet ' + event.target.name.value;
-    console.log('search term', search)
 
-    /* pipe search into axios */
     axios.get(`https://images-api.nasa.gov/search?q=${search}&media_type=image`)
         .then((response) => {
             imgArr = formatArray(response);
             arrSize = imgArr.length;
-            console.log('array size', arrSize);
             display(imgArr.slice(currentPos, 9), heroEl);
         }).catch(err => {
             console.log('invalid search')

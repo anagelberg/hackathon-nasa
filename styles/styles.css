@@ -38,10 +38,11 @@ body {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  box-shadow: 3px 3px 3px white;
 }
 
 .planet-form {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .scroll-back,

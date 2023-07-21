@@ -1,3 +1,5 @@
+$box-shadow-value: 3px 3px 3px white;
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -40,11 +42,12 @@ body {
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
+        box-shadow: $box-shadow-value;
     }
 }
 
 .planet-form {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 .scroll-back,
