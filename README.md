@@ -12,7 +12,7 @@ Welcome to our project, crafted during a 6-hour in-class hackathon hosted by Bra
 ## Features
 - Dynamic Planet Imaging: Users can explore images by clicking on the top images of various planets, offering an intuitive and engaging way to browse through NASA's vast photo collection.
 - Search Functionality: A search bar is included for users who wish to find specific photos from NASA's database.
-- Looped Gallery Display: Photos are presented in a loop format, ensuring a seamless viewing experience where every image is accessible.
+- Infinite Scroll Gallery: The photo gallery is designed with an infinite scroll feature, allowing users to seamlessly cycle through images. 
 
 ## View the Site
 Experience our project live: [Planet Image Finder](https://planet-image-finder.amy-nagelberg.dev/)
